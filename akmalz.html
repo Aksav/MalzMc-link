@@ -1,0 +1,115 @@
+<html>
+ <head>
+  <title>
+   AkmalMc-Links
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script src="https://registry.npmmirror.com/vue/3.3.11/files/dist/vue.global.js">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      background-image: url('bengge.png');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .hover-grow:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+    .slide-in-left {
+      animation: slideInLeft 1s ease-in-out;
+    }
+    @keyframes slideInLeft {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
+    }
+    .slide-in-right {
+      animation: slideInRight 1s ease-in-out;
+    }
+    @keyframes slideInRight {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(0); }
+    }
+    .text-slide-up {
+      animation: slideUp 2s ease-in-out;
+    }
+    @keyframes slideUp {
+      0% { transform: translateY(100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .cool-hover {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.4s;
+    }
+    .cool-hover::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.15);
+      transition: all 0.75s;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .cool-hover:hover::before {
+      width: 0;
+      height: 0;
+    }
+    .glow-effect {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    .glow-effect:hover {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+    }
+  </style>
+ </head>
+ <body>
+  <div class="flex flex-col items-center justify-center min-h-screen bg-black-200 bg-opacity-50" id="app">
+   <div class="text-center fade-in">
+    <div class="flex justify-center mb-4">
+     <img alt="Profile Picture" class="rounded-full w-24 h-24" height="100" src="pengpe.png" width="100"/>
+    </div>
+    <div class="bg-gray-200 text-gray-800 rounded-full px-4 py-2 inline-block mb-8">
+     @AkmalMc
+    </div>
+    <div class="space-y-4">
+     <a class="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 text-black rounded-full px-6 py-3 w-64 shadow-md hover-grow slide-in-left cool-hover glow-effect" href="https://www.instagram.com/akmal_vano99" target="_blank">
+      <i class="fab fa-instagram mr-2">
+      </i>
+      Instagram
+     </a>
+     <a class="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 text-black rounded-full px-6 py-3 w-64 shadow-md hover-grow slide-in-right cool-hover glow-effect" href="https://www.tiktok.com/@akmalvano_?_t=8qbxYxwXXx2&_r=1" target="_blank">
+      <i class="fab fa-tiktok mr-2">
+      </i>
+      Tiktok
+     </a>
+     <a class="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 text-black rounded-full px-6 py-3 w-64 shadow-md hover-grow slide-in-left cool-hover glow-effect" href="https://youtube.com/@akmlyt7440?si=H0mo1_WUaZseMods" target="_blank">
+      <i class="fab fa-youtube mr-2">
+      </i>
+      Youtube
+     </a>
+    </div>
+   </div>
+   <div class="mt-8 text-white text-sm text-slide-up">
+    Created by AkmalzMc
+   </div>
+  </div>
+  <script>
+   const { createApp } = Vue;
+    createApp({}).mount('#app');
+  </script>
+ </body>
+</html>
